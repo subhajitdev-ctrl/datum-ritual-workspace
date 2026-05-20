@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DATUM - Ritual Workspace</title>
+    
+    <!-- PWA Configurations -->
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="theme-color" content="#A67C52" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="DATUM" />
+    <link rel="apple-touch-icon" href="/icon-512.png" />
+    <meta name="description" content="A luxury minimalist utility app designed for intentional daily rituals and habit tracking." />
+  </head>
+  <body class="bg-[#FAF9F5]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.register('/sw.js', { scope: '/' })
+          .then(reg => console.log('DATUM Service Worker registered successfully with scope:', reg.scope))
+          .catch(err => console.warn('Service Worker registration failed:', err));
+      }
+    </script>
+  </body>
+</html>
+

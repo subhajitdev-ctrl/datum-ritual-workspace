@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Hanken+Grotesk:wght@300;400;500;600&display=swap');
+
+@theme {
+  --font-display: "Playfair Display", serif;
+  --font-body: "Hanken Grotesk", sans-serif;
+  
+  --color-background: #fdf9f1;
+  --color-surface: #f2ede5;
+  --color-on-surface: #1c1c17;
+  --color-on-surface-variant: #474740;
+  --color-primary: #5f5e59;
+  --color-on-primary: #ffffff;
+  --color-secondary: #5f5e5e;
+  --color-tertiary: #685c50;
+  --color-outline: #c8c7be;
+  --color-inverse-surface: #31302b;
+  --color-inverse-on-surface: #f4f0e8;
+}
+
+@layer base {
+  html, body {
+    @apply bg-background text-on-surface font-body;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+
+  #root {
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  #root::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+
+  *::-webkit-scrollbar {
+    display: none !important;
+  }
+}
+
+@layer utilities {
+  .plaster-texture {
+    background-color: #F4F1EA;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCotcYrVy5IbkAdCOWX-Ynn14aoSDzczrRVe8Asv_PPf04TIJPmT6KkoSC_nHjN7O_zNPoBMy4OVL6cMBthnZoekrq3NQ8nmT4NXIOjADfYJpaf9zQDp7Eufdzl4HujWrJmqIs9jDuyjMV0Ff8yfO_Lv7McMV0yDgZGsHTo0XsfqCD3vH2R8Pvo5j7GNujarFXTCgx_3HCxXcLWGV0WmnscGMMlNWFVG703-vBYW3fez3JPI7m7twGSXcgb-rbDpvwXG_wCSK--fXGT);
+    background-blend-mode: soft-light;
+  }
+}

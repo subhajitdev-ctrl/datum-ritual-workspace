@@ -1,0 +1,6 @@
+{
+  "name": "DATUM - Ritual Workspace",
+  "description": "A luxury minimalist utility app designed for intentional daily rituals and habit tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
