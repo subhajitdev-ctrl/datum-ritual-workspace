@@ -1,12 +1,12 @@
 const CACHE_NAME = "datum-v1";
 const ASSETS_TO_CACHE = [
-  "/",
-  "/index.html",
-  "/manifest.json",
-  "/icon-192.png",
-  "/icon-512.png",
-  "/screenshot-narrow.png",
-  "/screenshot-wide.png"
+  "./",
+  "index.html",
+  "manifest.json",
+  "icon-192.png",
+  "icon-512.png",
+  "screenshot-narrow.png",
+  "screenshot-wide.png"
 ];
 
 // Install Event
@@ -75,7 +75,15 @@ self.addEventListener("fetch", (event) => {
       }).catch((err) => {
         // Fallback offline handler for layout routing
         if (event.request.mode === "navigate") {
-          return caches.match("/index.html");
+          return caches.match(event.request).then((response) => {
+            if (response) return response;
+            return caches.open(CACHE_NAME).then((cache) => {
+              return cache.keys().then((keys) => {
+                const fallback = keys.find(k => k.url.endsWith("/index.html") || k.url.endsWith("/"));
+                return fallback ? cache.match(fallback) : undefined;
+              });
+            });
+          });
         }
         console.warn("Fetch failed for resource:", event.request.url, err);
       });

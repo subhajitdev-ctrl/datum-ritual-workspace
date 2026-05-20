@@ -9,10 +9,16 @@ createRoot(document.getElementById('root')!).render(
   </StrictMode>,
 );
 
-// Register Service Worker in the React bundle
+// Register Service Worker dynamically based on current deployment path
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => {
-    navigator.serviceWorker.register('/sw.js', { scope: '/' })
+    const base = window.location.pathname.endsWith('/') 
+      ? window.location.pathname 
+      : window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/') + 1);
+    
+    const swUrl = `${base}sw.js`;
+    
+    navigator.serviceWorker.register(swUrl, { scope: base })
       .then((reg) => {
         console.log('DATUM Service Worker registered from bundle with scope:', reg.scope);
       })
