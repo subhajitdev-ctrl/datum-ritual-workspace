@@ -90,5 +90,14 @@
       "url": "https://play.google.com/store/apps/details?id=com.subhajitdev.datum",
       "id": "com.subhajitdev.datum"
     }
+  ],
+  "iarc_rating_id": "e96435fd-8d2b-478a-bf97-0098dfc38466",
+  "scope_extensions": [
+    {
+      "origin": "https://*.vercel.app"
+    },
+    {
+      "origin": "https://*.github.io"
+    }
   ]
 }
