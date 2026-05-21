@@ -5,8 +5,8 @@ const ASSETS_TO_CACHE = [
   "manifest.json",
   "icon-192.png",
   "icon-512.png",
-  "screenshot-narrow.png",
-  "screenshot-wide.png"
+  "screenshot-narrow.jpg",
+  "screenshot-wide.jpg"
 ];
 
 // Install Event

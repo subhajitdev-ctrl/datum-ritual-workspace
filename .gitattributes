@@ -1,0 +1,19 @@
+# Force Git to check out files as LF line endings
+* text eol=lf
+
+# Explicitly declare files that should be treated as text
+*.js text
+*.ts text
+*.tsx text
+*.json text
+*.css text
+*.html text
+*.md text
+
+# Explicitly declare files that are binary and must not be modified by Git
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.webp binary

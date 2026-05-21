@@ -32,16 +32,16 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-narrow.png",
-      "type": "image/png",
-      "sizes": "1080x1920",
+      "src": "screenshot-narrow.jpg",
+      "type": "image/jpeg",
+      "sizes": "720x1280",
       "form_factor": "narrow",
       "label": "DATUM - Mindfulness Ritual Trigger Screen"
     },
     {
-      "src": "screenshot-wide.png",
-      "type": "image/png",
-      "sizes": "1920x1080",
+      "src": "screenshot-wide.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
       "form_factor": "wide",
       "label": "DATUM - Analytics and Habit Stats Dashboard"
     }
