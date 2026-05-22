@@ -1,0 +1,145 @@
+{
+  "id": "/",
+  "short_name": "DATUM",
+  "name": "DATUM - Ritual Workspace",
+  "description": "A luxury minimalist utility app designed for intentional daily rituals and habit tracking.",
+  "categories": ["lifestyle", "personalization", "productivity"],
+  "icons": [
+    {
+      "src": "icon-72.png",
+      "type": "image/png",
+      "sizes": "72x72",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-96.png",
+      "type": "image/png",
+      "sizes": "96x96",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-128.png",
+      "type": "image/png",
+      "sizes": "128x128",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-152.png",
+      "type": "image/png",
+      "sizes": "152x152",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-180.png",
+      "type": "image/png",
+      "sizes": "180x180",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "icon-384.png",
+      "type": "image/png",
+      "sizes": "384x384",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "screenshot-narrow.jpg",
+      "type": "image/jpeg",
+      "sizes": "720x1280",
+      "form_factor": "narrow",
+      "label": "DATUM - Mindfulness Ritual Trigger Screen"
+    },
+    {
+      "src": "screenshot-wide.jpg",
+      "type": "image/jpeg",
+      "sizes": "1280x720",
+      "form_factor": "wide",
+      "label": "DATUM - Analytics and Habit Stats Dashboard"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Focus Trigger",
+      "short_name": "Focus",
+      "description": "Initiate your daily mindfulness ritual",
+      "url": "/",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "Analytics Dashboard",
+      "short_name": "Stats",
+      "description": "Review and analyze your ritual logs",
+      "url": "/?view=analytics",
+      "icons": [
+        {
+          "src": "icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#FAF9F5",
+  "theme_color": "#A67C52",
+  "display": "standalone",
+  "display_override": ["standalone", "window-controls-overlay", "minimal-ui"],
+  "orientation": "portrait",
+  "lang": "en-US",
+  "dir": "ltr",
+  "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.subhajitdev.datum",
+      "id": "com.subhajitdev.datum"
+    }
+  ],
+  "iarc_rating_id": "e96435fd-8d2b-478a-bf97-0098dfc38466",
+  "scope_extensions": [
+    {
+      "origin": "https://*.vercel.app"
+    },
+    {
+      "origin": "https://*.github.io"
+    }
+  ]
+}
