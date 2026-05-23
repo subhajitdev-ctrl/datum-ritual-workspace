@@ -1,20 +1,29 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://ai.google.dev/static/site-assets/images/share-ais-513315318.png" />
-</div>
+# Datum Mobile Application
 
-# Run and deploy your AI Studio app
+This is a high-performance React application powered by Vite, Tailwind CSS, and Capacitor for Android deployment.
 
-This contains everything you need to run your app locally.
+## 🚀 How to Build the APK on Your Local Machine
 
-View your app in AI Studio: https://ai.studio/apps/b5139b46-1bad-406a-98c6-9747cf3b0f7d
+When downloading this repository as a ZIP from GitHub, the `node_modules` directory is excluded (as it is ignored by Git). To initialize the Capacitor engine and sync the files correctly so Android Studio can compile, please follow these steps:
 
-## Run Locally
+### 1. Install Dependencies and Sync Assets
+Open your command line/terminal in the root directory and run the following commands:
 
-**Prerequisites:**  Node.js
+```bash
+# 1. Restore all dependencies (this creates the node_modules folder containing the Capacitor Android SDK)
+npm install
 
+# 2. Compile the production-ready web assets
+npm run build
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+# 3. Synchronize the build output and configuration with the Android project
+npx cap sync
+```
+
+### 2. Open and Build in Android Studio
+1. Launch **Android Studio**.
+2. Select **File > Open**, navigate to the `/android` folder inside this project, and click **Open**.
+3. Wait for the Gradle sync to complete (it will now pass cleanly).
+4. Build your APK: Go to **Build > Build Bundle(s) / APK(s) > Build APK(s)**.
+
+Your production-ready APK will be located under `android/app/build/outputs/apk/debug/app-debug.apk` and is fully ready to be run on any device or emulator!
