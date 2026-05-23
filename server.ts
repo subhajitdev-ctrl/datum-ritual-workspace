@@ -71,6 +71,13 @@ async function startServer() {
 
       addFolderRecursive(rootDir);
 
+      // Add self-contained capacitor-android core library to avoid requiring node_modules locally!
+      const localCapacitorAndroidPath = path.join(rootDir, "node_modules/@capacitor/android/capacitor");
+      if (fs.existsSync(localCapacitorAndroidPath)) {
+        console.log("Adding local self-contained capacitor-android module to ZIP...");
+        zip.addLocalFolder(localCapacitorAndroidPath, "android/capacitor-android");
+      }
+
       // Generate buffer
       const buffer = zip.toBuffer();
       console.log(`In-memory ZIP successfully prepared: ${(buffer.length / 1024 / 1024).toFixed(2)} MB`);
