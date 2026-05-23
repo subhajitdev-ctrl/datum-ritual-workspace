@@ -830,6 +830,41 @@ export default function App() {
                   </motion.div>
                 )}
 
+                <section className="bg-white rounded-[2rem] p-8 border border-outline/10 shadow-[0_8px_30px_rgba(0,0,0,0.01)] text-left">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-full bg-primary/5 flex items-center justify-center">
+                      <Smartphone className="w-5 h-5 text-primary opacity-80" />
+                    </div>
+                    <div>
+                      <span className="font-body text-[10px] text-primary/40 font-bold tracking-[0.2em] uppercase block">Mobile Platform</span>
+                      <h4 className="font-display text-xl text-primary font-medium tracking-tight">Android Native Export</h4>
+                    </div>
+                  </div>
+
+                  <p className="font-body text-xs text-primary/50 leading-relaxed mb-6">
+                    Download the complete, pre-configured Capacitor & Android Studio project as a binary-safe ZIP. Unzip and open the folder in Android Studio to build, debug, and generate your custom mobile APK or AAB bundle!
+                  </p>
+
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 p-4 rounded-2xl bg-[#FAF9F5] border border-outline/5">
+                    <div>
+                      <span className="font-display text-base font-medium block text-primary">Pre-Configured ZIP Archive</span>
+                      <span className="font-body text-[10px] text-emerald-600 font-bold uppercase tracking-wider flex items-center gap-1.5 mt-0.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                        Direct HTTP Download (Binary-Safe)
+                      </span>
+                    </div>
+                    
+                    <a
+                      href="/api/download-zip"
+                      download="DATUM_Android_Capacitor_Project.zip"
+                      className="flex items-center justify-center gap-2 px-6 py-3 bg-[#30302E] hover:bg-black text-white rounded-full font-body text-xs font-semibold tracking-wider transition-all duration-300 active:scale-95 shadow-sm cursor-pointer"
+                    >
+                      <Download className="w-4 h-4" />
+                      Download Project ZIP
+                    </a>
+                  </div>
+                </section>
+
                 <div className="flex justify-center w-full px-4 pt-4 mb-12">
                   <span className="font-body text-[9px] text-primary/20 tracking-[0.4em] font-bold uppercase">BY STUDIO OCTO</span>
                 </div>
